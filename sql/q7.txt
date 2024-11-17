@@ -1,0 +1,13 @@
+Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+
+SELECT NAME
+FROM STUDENTS
+WHERE MARKS > 75 
+ORDER BY SUBSTR(NAME,-3) , ID ASC;
+
+
+
+Primary Sort: The results are first sorted by the last three characters of each student's name. So, "Bobby" and "Robby" would be grouped together because they both end with "bby."
+
+Secondary Sort: If there are multiple names that end with the same last three characters, the query further sorts those names by ID in ascending order. This ensures that if you have students like "Bobby" (ID 1) and "Robby" (ID 2), "Bobby" will appear before "Robby" in the results because ID 1 is less than ID 2.
+

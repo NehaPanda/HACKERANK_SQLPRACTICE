@@ -1,0 +1,10 @@
+Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates?
+
+SELECT DISTINCT CITY
+FROM STATION
+WHERE UPPER(SUBSTR(CITY, -1)) IN ('A', 'E', 'I', 'O', 'U');
+So, for example:
+
+If the city name is "San Francisco", the last character is 'o', which will be converted to 'O' for the comparison.
+If the city name is "Hawaii", the last character is 'i', which will be converted to 'I'.
+
